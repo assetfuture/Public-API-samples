@@ -18,7 +18,7 @@ HEADERS = {'Cache-Control': 'no-cache','Ocp-Apim-Subscription-Key': KEY,}
 #Row number where header is located
 HEADER_ROW_NUM = 0
 INDEX = 1
-CSV_FILE = "C:\\<Location-of-file>\\<FileName>.xlsx"
+CSV_FILE = ".\\<FileName>.xlsx"
 DATA_SHEET = "<Excel-sheet-name>"
 areaProcessedDict = {}
 jsonArray = []

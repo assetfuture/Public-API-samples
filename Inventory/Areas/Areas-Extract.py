@@ -14,7 +14,7 @@ HEADERS = {'Cache-Control': 'no-cache','Ocp-Apim-Subscription-Key': KEY,}
 #Optional Parameters
 PARAMS = {'count': 10000,'alldata':False}
 #CSV File location
-CSV_FILE = "c:\\<Location-for-storing-csv>\\Areas.csv"
+CSV_FILE = ".\\<FileName>.csv"
 
 try:
     print("Send GET Request.")
