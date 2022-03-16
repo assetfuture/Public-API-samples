@@ -42,7 +42,7 @@ try:
     csvFinalData = ''    
     csvHeader = "Asset Id,Space code,Area,Space type,Item Type,Item Name,Shortname,ModelId,ModelName,Quantity,Survey Condition,Survey Condition Date,Cost Factor,Life Factor,Duty Factor,"
     csvHeader = csvHeader + "Strategy,Years to replace,Proprietory name,Tracking identifier,Cost per unit,Manufacturer,Model No,Serial No, Supplier name, Supplier contact,"
-    csvHeader = csvHeader + "Manufactured date, Installed date, Obsolete date,Notes,Warranty,Replacement condition,Risk name,Unit of measure,Importance"
+    csvHeader = csvHeader + "Manufactured date, Installed date, Obsolete date,Notes,Warranty,Replacement condition,Risk name,Unit of measure,Importance,Status"
     
     customFieldCount = 0
     while itemCount >= RECORDCOUNT:
@@ -96,7 +96,8 @@ try:
             csvData = csvData + '"' + str(item["replacementCondition"] or '') + '"' + ","
             csvData = csvData + '"' + str(item["riskName"] or '') + '"' + ","
             csvData = csvData + '"' + str(item["unitOfMeasure"] or '') + '"' + ","
-            csvData = csvData + '"' + str(item["importance"] or '') + '"'
+            csvData = csvData + '"' + str(item["importance"] or '') + '"' + ","
+            csvData = csvData + '"' + str(item["status"] or '') + '"'
             i=0
             #transform extensions to columns        
             if len(item["extensions"]) > 0:
