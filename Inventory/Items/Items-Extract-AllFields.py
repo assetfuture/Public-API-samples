@@ -7,6 +7,9 @@ import requests
 #To retrieve subscription key, sign-in to developer portal and access "Try it" section for any API
 KEY = '<SUBSCRIPTION-KEY>'
 
+#Replace with path for generating the CSV file
+CSVPATH = ".\\FileName.csv"
+
 #API urls that needs to be accessed
 AREAURL = "https://api.assetfuture.com/inventory/Areas"
 ITEMURL = "https://api.assetfuture.com/inventory/Items"
@@ -15,7 +18,7 @@ HEADERS = {'Cache-Control': 'no-cache','Ocp-Apim-Subscription-Key': KEY}
 
 RECORDCOUNT = 1000
 STARTINDEX = 0
-CSVPATH = ".\\FileName.csv"
+
 itemCount = RECORDCOUNT
 areaCount = RECORDCOUNT
 dictAreas = {}
@@ -28,7 +31,6 @@ try:
     print("Retrieving Areas")
     while areaCount >= RECORDCOUNT:
         PARAMS = {'count': RECORDCOUNT,'startIndex': STARTINDEX}
-        print (PARAMS)
         response = requests.get(url = AREAURL, params = PARAMS, headers = HEADERS)
         areas = response.json()
         STARTINDEX = STARTINDEX + RECORDCOUNT
@@ -47,7 +49,6 @@ try:
     customFieldCount = 0
     while itemCount >= RECORDCOUNT:
         PARAMS = {'count': RECORDCOUNT,'startIndex': STARTINDEX}
-        print (PARAMS)
         responseItems = requests.get(url = ITEMURL, params = PARAMS, headers = HEADERS)
         items = responseItems.json()
         STARTINDEX = STARTINDEX + RECORDCOUNT
