@@ -1,6 +1,6 @@
 import json
 import os
-import requests
+import pip._vendor.requests
 
 #Replace with your api subscription key.
 #Generated after signing-up to the developer portal.

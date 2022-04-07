@@ -1,7 +1,7 @@
 # Reading an excel file using Python
 from numpy import nan
 import pandas as pd
-import requests
+import pip._vendor.requests
 
 #Replace with your api subscription key.
 #Generated after signing-up to the developer portal.

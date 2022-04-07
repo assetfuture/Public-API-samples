@@ -1,5 +1,5 @@
 import os
-import requests
+import pip._vendor.requests
 
 KEY = '<Subscription-key>'
 AREAURL = "https://api.assetfuture.com/inventory/Areas"
