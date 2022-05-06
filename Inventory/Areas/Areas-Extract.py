@@ -1,5 +1,4 @@
 import csv
-import requests
 import json
 
 #Replace with your api subscription key.
