@@ -1,0 +1,18 @@
+import requests
+import uuid
+
+SUBSCRIPTION_KEY = '9ca44177ac5046409622e52451252d4b'
+MODELS_API_ENDPOINT = "https://api.assetfuture.com/inventory/Areas"
+REQUEST_PARAMETERS = {'count': 1,'alldata':False}
+REQUEST_HEADER = {'Cache-Control': 'no-cache','Ocp-Apim-Subscription-Key': SUBSCRIPTION_KEY}
+
+response = requests.get(url = MODELS_API_ENDPOINT, 
+                        params = REQUEST_PARAMETERS, 
+                        headers = REQUEST_HEADER)
+
+areas = response.json()
+
+for area in areas["data"]:
+    print("Name::" + area["name"])
+    print("areaPath::" + area["areaPath"])
+
