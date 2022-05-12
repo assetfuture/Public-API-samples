@@ -1,7 +1,7 @@
 import requests
 import uuid
 
-SUBSCRIPTION_KEY = '9ca44177ac5046409622e52451252d4b'
+SUBSCRIPTION_KEY = 'subscription-key'
 MODELS_API_ENDPOINT = "https://api.assetfuture.com/inventory/Areas"
 REQUEST_PARAMETERS = {'count': 1,'alldata':False}
 REQUEST_HEADER = {'Cache-Control': 'no-cache','Ocp-Apim-Subscription-Key': SUBSCRIPTION_KEY}
