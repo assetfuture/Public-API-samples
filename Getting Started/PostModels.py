@@ -33,7 +33,7 @@ with open(CSVPATH, encoding='utf-8') as csvf:
         costDict["amount"] = row['Costs_amount']
         costDict["currency"] = row['Costs_currency']
         costArray.append(costDict)
-        resourceDict["id"] = row['Resource_id']
+        resourceDict["dbId"] = row['Resource_id']
         resourceDict["costBPILoadDate"] = row['Resource_costBPILoadDate']
         resourceDict["uniqueIdentifier"] = row['Resource_uniqueIdentifier']
         resourceDict["quantity"] = row['Resource_quantity']
@@ -44,7 +44,7 @@ with open(CSVPATH, encoding='utf-8') as csvf:
         resourceDict["referenceId"] = row['Resource_referenceId']
         resourceDict["costs"] = costArray
         resourceArray.append(resourceDict)
-        taskDict["id"] = row['Task_id']
+        taskDict["dbId"] = row['Task_id']
         taskDict["name"] = row['Task_name']
         taskDict["shortName"] = row['Task_shortName']
         taskDict["referenceId"] = row['Task_referenceId']
@@ -54,7 +54,7 @@ with open(CSVPATH, encoding='utf-8') as csvf:
         taskDict["uniqueIdentifier"] = row['Task_uniqueIdentifier']
         taskDict["resources"] = resourceArray
         taskArray.append(taskDict)
-        modelDict["id"] = row['Model_id']
+        modelDict["dbId"] = row['Model_id']
         modelDict["referenceId"] = row['Model_referenceId']
         modelDict["shortName"] = row['Model_shortName']
         modelDict["name"] = row['Model_name']
