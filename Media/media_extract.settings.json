@@ -1,0 +1,26 @@
+{
+  "_comments": {
+    "note": "Keys starting with _ are documentation only — ignored by the script.",
+    "baseUrl": "Media API root URL (APIM or local).",
+    "filter": {
+      "description": "Sent as JSON body to POST /v2/Documents/metadata.",
+      "space": "Optional. One of: Area, Item, Issue",
+      "areaIdPrefix": "Optional. Return media whose area number starts with this prefix.",
+      "examples": {
+        "allPhotos": {},
+        "areaPhotosOnly": { "space": "Area" },
+        "itemPhotosInAreaPrefix": { "space": "Item", "areaIdPrefix": "380.2" },
+        "areaPrefixAnySpace": { "areaIdPrefix": "380.2" }
+      }
+    },
+    "outputPath": "Working folder for photos and index. Supports {timestamp}.",
+    "outputFileName": "Optional ZIP name inside outputPath. Default: media-extract-{timestamp}.zip",
+    "pageSize": "Metadata page size (max 10000).",
+    "progressEvery": "Log download progress every N photos."
+  },
+  "baseUrl": "http://localhost:5005",
+  "filter": {},
+  "outputPath": "output/media-extract-{timestamp}",
+  "pageSize": 1000,
+  "progressEvery": 10
+}
